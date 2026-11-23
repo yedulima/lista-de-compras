@@ -8,12 +8,15 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&family=Numans&display=swap" rel="stylesheet" />
+		<link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="src/root.css" />
 	</head>
 
 	<body>
 		<main>
-			<img src="https://i.pinimg.com/originals/fc/9d/ff/fc9dfff31121e22216be786dc7a2ee5f.jpg" />
+			<img
+				src="https://i.pinimg.com/originals/fc/9d/ff/fc9dfff31121e22216be786dc7a2ee5f.jpg"
+			/>
 			<form>
 				<input
 					class="input-item"
@@ -35,19 +38,30 @@
 				<hr />
 
 				<ul id="lista-de-compras">
-					<li>
-						<div class="lista-item-container">
-							<input
-								type="checkbox"
-								id="checkbox-1"
-							/>
-							<p>Ração de gato</p>
+					<li class="lista-container">
+						<div>
+							<div class="lista-item-container">
+								<input
+									type="checkbox"
+									id="checkbox-1"
+								/>
+								<p>Ração de gato</p>
+							</div>
+							<p class="texto-data">Segunda-feira (31/10/2022) às 08:30</p>
 						</div>
-						<p class="texto-data">Segunda-feira (31/10/2022) às 08:30</p>
+						<button class="button-excluir-item">
+							<span
+								class="mdi mdi-trash-can-outline mdi-24px"
+								style="color: red"
+							></span>
+						</button>
 					</li>
 				</ul>
 			</div>
 		</main>
-		<script type="module" src="/src/main.js"></script>
+		<script
+			type="module"
+			src="/src/main.js"
+		></script>
 	</body>
 </html>

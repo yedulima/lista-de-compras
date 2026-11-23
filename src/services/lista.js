@@ -12,6 +12,14 @@ export function adicionarItem(nome) {
 	return item;
 }
 
+export function excluirItem(id) {
+	const indice = itens.findIndex((item) => item.id === id);
+
+	if (indice !== -1) {
+		itens.splice(indice, 1);
+	}
+}
+
 export function listarItens() {
 	return [...itens];
 }

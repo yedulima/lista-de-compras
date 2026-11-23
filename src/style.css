@@ -82,6 +82,18 @@ form {
 	gap: 8px;
 }
 
+#lista-de-compras {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.lista-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .lista-item-container {
 	display: flex;
 	gap: 8px;
@@ -93,6 +105,14 @@ form {
 
 ul {
 	list-style-type: none;
+}
+
+.button-excluir-item {
+	background-color: rgb(252, 139, 139);
+	border-radius: 100%;
+	border: none;
+	padding: 5px;
+	cursor: pointer;
 }
 
 .input-checkbox {

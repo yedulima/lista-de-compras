@@ -1,7 +1,12 @@
+import { excluirItem } from "../services/lista.js";
 import { formatarData } from "../utils";
 
 export function criarItemLista(item) {
 	const itemLista = document.createElement("li");
+	itemLista.classList.add("lista-container");
+
+	const conteudoItem = document.createElement("div");
+
 	const conteinerItemLista = document.createElement("div");
 	conteinerItemLista.classList.add("lista-item-container");
 
@@ -19,10 +24,25 @@ export function criarItemLista(item) {
 	paragrafoData.classList.add("texto-data");
 	paragrafoData.innerText = formatarData(item.data);
 
+	const botaoExcluir = document.createElement("button");
+	botaoExcluir.classList.add("button-excluir-item");
+	botaoExcluir.addEventListener("click", () => {
+		excluirItem(item.id);
+		itemLista.remove();
+	});
+
+	const iconeExcluir = document.createElement("span");
+	iconeExcluir.classList.add("mdi", "mdi-trash-can-outline", "mdi-24px");
+	iconeExcluir.style.color = "red";
+
+	botaoExcluir.appendChild(iconeExcluir);
+
 	conteinerItemLista.appendChild(inputCheckbox);
 	conteinerItemLista.appendChild(nomeItem);
-	itemLista.appendChild(conteinerItemLista);
-	itemLista.appendChild(paragrafoData);
+	conteudoItem.appendChild(conteinerItemLista);
+	conteudoItem.appendChild(paragrafoData);
+	itemLista.appendChild(conteudoItem);
+	itemLista.appendChild(botaoExcluir);
 
 	return itemLista;
 }
