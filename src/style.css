@@ -1,26 +1,10 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-:root {
-	--cor-primaria: #f55b64;
-	--cor-secundaria: #c2373f;
-	--neutro: #f9f9f9;
-	--preto: #131730;
-	--fonte-titulo: "Krona One", sans-serif;
-	--fonte-texto: "Numans", sans-serif;
-	--degrade-azul: linear-gradient(180deg, #000000 0%, #26327f 100%);
-}
-
 body {
 	background: var(--degrade-azul);
 	background-repeat: no-repeat;
-	height: 100%;
+	height: 100vh;
 
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 }
 
