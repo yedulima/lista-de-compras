@@ -115,6 +115,14 @@ ul {
 	cursor: pointer;
 }
 
+#aviso-lista-vazia {
+	display: inline;
+	text-align: center;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 0.95rem;
+}
+
 .input-checkbox {
 	display: none;
 }

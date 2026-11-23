@@ -1,5 +1,15 @@
-import { excluirItem } from "../services/lista.js";
+import { excluirItem, numeroItens } from "../services/lista.js";
 import { formatarData } from "../utils";
+
+const textoListaVazia = document.getElementById("aviso-lista-vazia");
+
+export function atualizarListaVazia() {
+	if (numeroItens() === 0) {
+		textoListaVazia.style.display = "inline";
+	} else {
+		textoListaVazia.style.display = "none";
+	}
+}
 
 export function criarItemLista(item) {
 	const itemLista = document.createElement("li");
@@ -29,6 +39,7 @@ export function criarItemLista(item) {
 	botaoExcluir.addEventListener("click", () => {
 		excluirItem(item.id);
 		itemLista.remove();
+		atualizarListaVazia();
 	});
 
 	const iconeExcluir = document.createElement("span");

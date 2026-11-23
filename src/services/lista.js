@@ -23,3 +23,7 @@ export function excluirItem(id) {
 export function listarItens() {
 	return [...itens];
 }
+
+export function numeroItens() {
+	return itens.length;
+}

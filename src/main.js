@@ -1,5 +1,5 @@
 import "./style.css";
-import { criarItemLista } from "./components/listaItem.js";
+import { atualizarListaVazia, criarItemLista } from "./components/listaItem.js";
 import { adicionarItem } from "./services/lista.js";
 
 const inputItem = document.getElementById("input-item");
@@ -14,6 +14,9 @@ botaoAdicionar.addEventListener("click", () => {
 
 	const novoItem = adicionarItem(inputItem.value);
 	listaCompras.appendChild(criarItemLista(novoItem));
+	atualizarListaVazia();
 
 	inputItem.value = "";
 });
+
+atualizarListaVazia();
